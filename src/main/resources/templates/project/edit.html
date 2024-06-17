@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout/template::areas(~{::title},~{::main})}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit Project</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<main class="main">
+    <link rel="stylesheet" th:href="@{/css/project/create.css}">
+
+    <div class="container">
+        <h1>Edit Project</h1>
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="flex-input">
+                        <div>
+                            <input id="project-name" class="form-control" placeholder="Project Name">
+                            <label>From</label>
+                            <input id="project-start" class="form-control" type="date" placeholder="From">
+                        </div>
+
+                        <div>
+                            <input id="project-code" class="form-control" placeholder="Project Code">
+                            <label>To</label>
+                            <input id="project-end" class="form-control" type="date" placeholder="To">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
+                </div>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Staff</th>
+                    <th>Role</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div class="save-project">
+                <button class="btn btn-success">Submit</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script th:src="@{/js/project/edit.js}"></script>
+</main>
+</body>
+</html>

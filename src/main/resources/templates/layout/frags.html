@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="header" th:fragment="header">
+    <div class="header-left">
+        <img th:src="@{/img/FPT_logo_2010.svg.png}" alt="" style="width: 80px; height: 50px;">
+    </div>
+    <div class="header-right">
+        <a href="/logout" id="logout">
+            <i class='fas fa-sign-out-alt' style='font-size:36px'></i>
+        </a>
+    </div>
+</div>
+
+<div th:fragment="menu">
+    <nav id="sidebar" class="sidebar-wrapper">
+        <div class="sidebar-content">
+            <div class="sidebar-brand">
+                <a href="#">Claim Request</a>
+                <div id="close-sidebar">
+                </div>
+            </div>
+            <div class="sidebar-header">
+                <div class="user-pic">
+                    <img class="img-responsive img-rounded" th:src="@{/img/User_icon_2.svg.png}"/>
+                </div>
+                <div class="user-info">
+                      <span id="infoStaff">
+
+                      </span>
+                    <span class="user-role" sec:authorize="hasRole('ROLE_ADMIN')">Admin</span>
+                </div>
+            </div>
+            <!-- sidebar-header  -->
+            <div class="sidebar-search">
+                <div>
+                    <div class="input-group">
+                        <input type="text" class="form-control search-menu" placeholder="Search...">
+                        <div class="input-group-append">
+                          <span class="input-group-text">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- sidebar-search  -->
+            <div class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a th:href="@{/admin/staff/list}">
+                            <i class="fa fa-user"></i>
+                            <span>Staff Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/admin/projects/list}">
+                            <i class="fa fa-briefcase"></i>
+                            <span>Project Management</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- sidebar-menu  -->
+        </div>
+        <!-- sidebar-content  -->
+    </nav>
+</div>
+
+
+</body>
+</html>

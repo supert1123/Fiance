@@ -1,0 +1,22 @@
+
+.page-wrapper {
+    height: 100%;
+}
+.header {
+    background-color: rgb(23, 148, 148);
+    display: flex;
+    justify-content: space-between;
+}
+.header-left, .header-right {
+    padding: 10px;
+}
+.header-right > a {
+    padding: 10px;
+    font-size: 30px;
+    margin-top: 10px !important;
+    color: black !important;
+}
+.header-right > a:hover {
+    color: white;
+}
+

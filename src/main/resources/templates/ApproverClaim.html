@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" th:href="@{/css/createClaim.css}">
+</head>
+<body>
+<div class="header">
+    <div class="header-left">
+        <img th:src="@{/img/FPT_logo_2010.svg.png}" alt="" style="width: 80px; height: 50px;">
+    </div>
+    <div class="header-right">
+        <a href="/logout" id="logout">
+            <i class='fas fa-sign-out-alt' style='font-size:36px'></i>
+        </a>
+    </div>
+</div>
+<div class="page-wrapper chiller-theme toggled">
+    <div>
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="#">Claim Request</a>
+                    <div id="close-sidebar">
+                    </div>
+                </div>
+                <div class="sidebar-header">
+                    <div class="user-pic">
+                        <img class="img-responsive img-rounded" th:src="@{/img/User_icon_2.svg.png}"
+                             alt="User picture">
+                    </div>
+                    <div class="user-info">
+                      <span class="user-name" id="infoStaff">
+                      </span>
+                        <span class="user-role">Staff</span>
+                    </div>
+                </div>
+                <!-- sidebar-header  -->
+                <div class="sidebar-search">
+                    <div>
+                        <div class="input-group">
+                            <input type="text" class="form-control search-menu" placeholder="Search...">
+                            <div class="input-group-append">
+                          <span class="input-group-text">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                          </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="main">
+        <div class="main-title">
+            <div class="main-title__left">
+                <i class="fa fa-angle-left" style="color: blue;"></i>
+                <a href="#" id="link-back">Back</a>
+            </div>
+            <div class="main-title__right">
+                <button class="btn btn-primary" id="submitApprove">Approve</button>
+                <button class="btn btn-danger" id="submitReject">Reject</button>
+                <button class="btn btn-warning" id="submitReturn">Return</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="claim-status">
+                <span class="claim-status__title">Claim Status:</span>
+                <span id="status"></span>
+            </div>
+            <div class="info-staff">
+                <div>
+                    <h6>Staff_Id</h6>
+                    <p id="staffId"></p>
+                </div>
+                <div>
+                    <h6>Staff Name</h6>
+                    <p id="staffName"></p>
+                </div>
+                <div>
+                    <h6>Staff Department</h6>
+                    <p>IT</p>
+                </div>
+            </div>
+            <div class="info-project">
+                <div>
+                    <h6>Project Name</h6>
+                    <p id="nameProject"></p>
+                    <p id="projectId" style="display: none"></p>
+                </div>
+                <div>
+                    <h6>Role in Project</h6>
+                    <p id="roleInProject"></p>
+                </div>
+                <div>
+                    <h6>Start Date</h6>
+                    <p id="startDate"></p>
+                </div>
+                <div>
+                    <h6>End Date</h6>
+                    <p id="endDate"></p>
+                </div>
+            </div>
+            <div class="remark">
+                <p>Remarks:</p>
+                <textarea name="" id="remark" cols="100" rows="2"></textarea>
+            </div>
+            <div class="content-table">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Day</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Total No. Hours</th>
+                    </tr>
+                    </thead>
+                    <tbody id="claimTable">
+                    <tr>
+                        <td id="dateOutput"></td>
+                        <td id="dayOutput"></td>
+                        <td id="fromOutput"></td>
+                        <td id="toOutput"></td>
+                        <td id="totalOutput"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/ApproverClaim.js}"></script>
+
+</body>
+</html>

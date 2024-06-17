@@ -1,0 +1,43 @@
+body {
+    color: #404E67;
+    background: #F5F7FA;
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    text-align: center;
+    margin: 0px;
+}
+.staff-account {
+    margin-bottom: 50px;
+}
+.staff-account div input {
+    width: 50%;
+    margin: 20px auto 40px;
+}
+label {
+    display: block;
+    text-align: center;
+}
+.row {
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.row div input {
+    width: 300px;
+}
+.form-control {
+    text-align: center;
+}
+.action-button {
+    display:flex;
+    justify-content: center;
+}
+
+.action-button input {
+    height: 40px;
+    font-size: 20px;
+    text-shadow: none;
+    border-radius: 10px;
+    line-height: 13px;
+    margin: 20px ;
+}

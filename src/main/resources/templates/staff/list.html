@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout/template::areas(~{::title},~{::main})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Staff Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+</head>
+<body>
+<main class="main">
+    <link rel="stylesheet" th:href="@{/css/project/list.css}">
+
+    <div class="container">
+        <h1>Staff</h1>
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div>
+                        <a th:href="@{/admin/staff/create}" class="btn btn-info add-new">Create New Staff</a>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Rank</th>
+                    <th>Salary</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody id="staff-table">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script th:src="@{/js/staff/list.js}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</main>
+
+</body>
+
+
+
+
+</html>

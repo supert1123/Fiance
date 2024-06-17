@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout/template::areas(~{::title},~{::main})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+</head>
+<body>
+<main class="main">
+    <link rel="stylesheet" th:href="@{/css/project/list.css}">
+
+    <div class="container">
+        <h1>Project</h1>
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div>
+                        <a th:href="@{/admin/projects/create}" class="btn btn-info add-new">Create New Project</a>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>PM</th>
+                    <th>QA</th>
+                    <th>Project Name</th>
+                    <th>Project Code</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody id="project-table">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script th:src="@{/js/project/list.js}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</main>
+
+</body>
+</html>

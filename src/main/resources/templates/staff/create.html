@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout/template::areas(~{::title},~{::main})}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create New Project</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<main class="main">
+    <link rel="stylesheet" th:href="@{/css/staff/create.css}">
+
+    <div class="container">
+        <h1>Create New Staff</h1>
+        <form th:action="@{/admin/staff/create}" th:method="POST" class="table-wrapper" th:object="${staffDTO}">
+            <div class="staff-account">
+                <div>
+                    <input class="form-control" type="text" placeholder="Staff Name" name="name">
+                </div>
+
+                <div>
+                    <input class="form-control" type="email" placeholder="Email" name="email">
+                </div>
+
+                <div>
+                    <input class="form-control" type="password" placeholder="Password" name="password">
+                </div>
+
+                <div>
+                    <input class="form-control" type="password" placeholder="Confirm Password" name="rePassword">
+                </div>
+            </div>
+
+            <div class="row">
+                <div>
+                    <label>Department</label>
+                    <input class="form-control" type="text" name="department">
+                </div>
+
+                <div>
+                    <label>Job Rank</label>
+                    <input class="form-control" type="text" name="rank">
+                </div>
+
+                <div>
+                    <label>Salary</label>
+                    <input class="form-control" type="text" name="salary">
+                </div>
+            </div>
+
+            <div class="action-button">
+                <input class="btn btn-success" type="submit">
+                <input type="reset" class="btn btn-info">
+            </div>
+        </form>
+    </div>
+
+</main>
+
+</body>
+
+</html>
